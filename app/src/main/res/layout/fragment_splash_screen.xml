@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_bg_gradient"
+    app:layoutDescription="@xml/fragment_splash_screen_scene"
+    tools:context=".MainFragments.splash_screen">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/_400sdp"
+        android:layout_height="@dimen/_200sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+    
+    <TextView
+        android:id="@+id/athlete_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/dot_tv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias=".38"
+        android:textSize="32sp"
+        android:textColor="@color/text_color_2"
+        android:layout_marginStart="@dimen/_35sdp"
+        android:text="ATHLETE"/>
+
+    <TextView
+        android:id="@+id/dot_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/minder_tv"
+        app:layout_constraintStart_toEndOf="@id/athlete_tv"
+        android:text="."
+        android:textColor="@color/text_color_2"
+        android:textSize="40sp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        app:layout_constraintTop_toTopOf="@+id/minder_tv"/>
+
+    <TextView
+        android:id="@+id/minder_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/text_color_2"
+        app:layout_constraintStart_toEndOf="@id/dot_tv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias=".38"
+        android:textSize="32sp"
+        android:layout_marginEnd="@dimen/_35sdp"
+        android:text="MINDER"/>
+
+    <TextView
+        android:id="@+id/mind_ur_sport_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/athlete_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="26sp"
+        android:textColor="@color/text_color_2"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:text="MIND YOUR SPORT"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/start_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:background="#E47D05"
+        android:textColor="@color/text_color"
+        android:text="How did it go?"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_40sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/motionLayout" />
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

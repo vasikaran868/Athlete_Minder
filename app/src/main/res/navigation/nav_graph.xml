@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splash_screen">
+
+    <fragment
+        android:id="@+id/splash_screen"
+        android:name="com.example.athleteminder.MainFragments.splash_screen"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splash_screen_to_questionsScreen"
+            app:destination="@id/questionsScreen"
+            app:popUpTo="@id/splash_screen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionsScreen"
+        android:name="com.example.athleteminder.MainFragments.QuestionsScreen"
+        android:label="fragment_questions_screen"
+        tools:layout="@layout/fragment_questions_screen" >
+        <action
+            android:id="@+id/action_questionsScreen_to_resultScreen"
+            app:destination="@id/resultScreen"
+            app:popUpTo="@id/questionsScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultScreen"
+        android:name="com.example.athleteminder.MainFragments.ResultScreen"
+        android:label="fragment_result_screen"
+        tools:layout="@layout/fragment_result_screen" />
+</navigation>
